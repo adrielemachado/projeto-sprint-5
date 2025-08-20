@@ -36,7 +36,7 @@ class Carousel {
         const carouselElement = document.getElementById("carousel");
         const titleElement = document.getElementById("carousel-title");
 
-        if (!carouselElement || titleElement) {
+        if (!carouselElement || !titleElement) {
             console.error("Elementos do carrossel não encontrado");
             return;
         }
