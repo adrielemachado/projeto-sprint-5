@@ -15,7 +15,7 @@ class Car {
         this.motor = motor;
         this.potencia = potencia;
         this.volumeCacamba = volumeCacamba;
-        this.roda = rosa;
+        this.roda = roda;
         this.image = image;
     }
 } 
@@ -88,7 +88,16 @@ function UpdateCompareTable() {
         const car = carArr[i];
 
         document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width ="100"> `; //modifica diretamente o elemento
-        
+        document.getElementById(`compare_modelo_${i}`).textContent = car.nome;
+        document.getElementById(`compare_alturacacamba_${i}`).textContent = car.alturaCacamba;
+        document.getElementById(`compare_alturaveiculo_${i}`).textContent = car.alturaVeiculo;
+        document.getElementById(`compare_alturasolo_${i}`).textContent = car.alturaSolo;
+        document.getElementById(`compare_capacidadedecarga_${i}`). textContent = car.capacidadeCarga;
+        document.getElementById(`compare_motor_${i}`).textContent = car.motor;
+        document.getElementById(`compare_potencia_${i}`).textContent = car.potencia;
+        document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
+        document.getElementById(`compare_roda_${i}`).textContent = car.roda;
+        document.getElementById(`compare_preco_${i}`).textContent = car.preco;
     }
 
 }
