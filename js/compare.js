@@ -56,7 +56,7 @@ function SetCarToCompare(el, carClass) {
 }
 
 function botaoComparar() {
-    const compareBtn = document.querySelector("button[onclick ='ShowCompare'");
+    const compareBtn = document.querySelector("button[onclick = 1'ShowCompare()']");
 
     if (carArr.length === 2){ //habilitando o botão apenas se array for estritamente igual a 2
         compareBtn.disabled = false;
@@ -69,8 +69,7 @@ function botaoComparar() {
     }
 }
 
-
-function ShowCompare() {
+function ShowCompare() { //verifica se realmente existem 2 opções selecionadas
     if(carArr.length < 2) {
         alert("Precisa marcar 2 carros para apresentar a comparação");
         return;
@@ -85,5 +84,11 @@ function HideCompare(){
 }
 
 function UpdateCompareTable() {
-    
+    for(let i = 0; i < carArr.length; i++) {
+        const car = carArr[i];
+
+        document.getElementById(`compare_image_${i}`).innerHTML = `<img src="${car.image}" width ="100"> `; //modifica diretamente o elemento
+        
+    }
+
 }
