@@ -77,6 +77,7 @@ function ShowCompare() { //verifica se realmente existem 2 opções selecionadas
 
     UpdateCompareTable();
     document.getElementById("compare").style.display = "block";
+    document.body.style.overflow = "hidden";
 }
 
 function HideCompare(){
@@ -98,6 +99,10 @@ function UpdateCompareTable() {
         document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
         document.getElementById(`compare_roda_${i}`).textContent = car.roda;
         document.getElementById(`compare_preco_${i}`).textContent = `R$ ${car.preco.toLocaleString('pt-BR')}`;
+
     }
+    document.addEventListener('DOMContentLoaded', function(){
+        botaoComparar();
+    })
 
 }
