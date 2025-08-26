@@ -97,7 +97,7 @@ function UpdateCompareTable() {
         document.getElementById(`compare_potencia_${i}`).textContent = car.potencia;
         document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
         document.getElementById(`compare_roda_${i}`).textContent = car.roda;
-        document.getElementById(`compare_preco_${i}`).textContent = car.preco;
+        document.getElementById(`compare_preco_${i}`).textContent = `R$ ${car.preco.toLocaleString('pt-BR')}`;
     }
 
 }
