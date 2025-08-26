@@ -35,21 +35,21 @@ function SetCarToCompare(el, carClass) {
         if(el.checked){
             if (carArr.length >= 2) {
                 el.checked = false;
-                alert("Você só pode comparar 2 veículos por vez")
+                alert("Você só pode comparar 2 veículos por vez");
                 return;
             } 
            
             if (GetCarArrPosition(carArr, carClass) === -1) {
-                carArr.push(carClass);
+                carArr.push(carClass); //seleciona o carro marcado e adiciona no array de comparação (lista)
             }
             
         } else {
-            const index = GetCarArrPosition(carArr, carClass);
+            const index = GetCarArrPosition(carArr, carClass); //index = referencia do array
             if (index !== -1) {
-                carArr.splice (index, 1) //splice modifica o array
+                carArr.splice (index, 1); //splice modifica o array, ou seja remove a seleção do carro
             }
         } 
-
+        botaoComparar();
     } else {
         throw "You need set a Car Class";
     }
@@ -57,6 +57,16 @@ function SetCarToCompare(el, carClass) {
 
 function botaoComparar() {
     const compareBtn = document.querySelector("button[onclick ='ShowCompare'");
+
+    if (carArr.length === 2){ //habilitando o botão apenas se array for estritamente igual a 2
+        compareBtn.disabled = false;
+        compareBtn.style.opacity = 1; //equivale a 100% de opacidade
+        compareBtn.style.cursor = "pointer";
+    } else {
+        compareBtn.disabled = true;
+        compareBtn.style.opacity = 0.5; 
+        compareBtn.cursor = "not-allowed";
+    }
 }
 
 
