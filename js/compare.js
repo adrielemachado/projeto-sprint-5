@@ -65,13 +65,13 @@ function botaoComparar() {
     } else {
         compareBtn.disabled = true;
         compareBtn.style.opacity = 0.5; 
-        compareBtn.cursor = "not-allowed";
+        compareBtn.style.cursor = "not-allowed";
     }
 }
 
 function ShowCompare() { //verifica se realmente existem 2 opções selecionadas
     if(carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação");
+        alert("É necessário marcar 2 carros para apresentar a comparação");
         return;
     }
 
