@@ -56,7 +56,7 @@ function SetCarToCompare(el, carClass) {
 }
 
 function botaoComparar() {
-    const compareBtn = document.querySelector("button[onclick'ShowCompare()']");
+    const compareBtn = document.querySelector("button[onclick='ShowCompare()']");
 
     if (carArr.length === 2){ //habilitando o botão apenas se array for estritamente igual a 2
         compareBtn.disabled = false;
