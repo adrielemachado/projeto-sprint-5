@@ -94,7 +94,7 @@ function UpdateCompareTable() {
         document.getElementById(`compare_alturacacamba_${i}`).textContent = car.alturaCacamba;
         document.getElementById(`compare_alturaveiculo_${i}`).textContent = car.alturaVeiculo;
         document.getElementById(`compare_alturasolo_${i}`).textContent = car.alturaSolo;
-        document.getElementById(`compare_capacidadedecarga_${i}`). textContent = car.capacidadeCarga;
+        document.getElementById(`compare_capacidadecarga_${i}`). textContent = car.capacidadeCarga;
         document.getElementById(`compare_motor_${i}`).textContent = car.motor;
         document.getElementById(`compare_potencia_${i}`).textContent = car.potencia;
         document.getElementById(`compare_volumecacamba_${i}`).textContent = car.volumeCacamba;
